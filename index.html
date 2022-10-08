@@ -5,11 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>my Tailwind</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
     <!-- Nav -->
-    <nav class="container p-6 mx-auto">
+    <nav class="container p-6 px-4 mx-auto">
       <div class="flex items-center justify-between">
         <div class="logo pt-2">
           <img src="./images/logo.svg" alt="logo" />
@@ -43,16 +49,16 @@
     <!-- Hero Section -->
     <section id="hero">
       <div
-        class="container mx-auto mt-10 p-6 flex flex-col-reverse items-center md:flex-row"
+        class="container mx-auto mt-10 p-6 px-4 flex flex-col-reverse items-center md:flex-row"
       >
         <!-- Text Side -->
         <div class="flex flex-col space-y-12 md:w-1/2">
           <h1
-            class="max-w-md text-4xl text-darkBlue text-center md:text-left md:text-5xl"
+            class="max-w-md text-4xl text-darkBlue font-bold text-center md:text-left md:text-5xl"
           >
             Bring everyone together to build better products.
           </h1>
-          <p class="max-w-sm text-center md:text-left">
+          <p class="max-w-sm text-center text-darkGrayishBlue md:text-left">
             Manage makes it simple for software teams to plan day-to-day tasks
             while keeping the larger team goals in view
           </p>
@@ -68,6 +74,103 @@
         <!-- Image Side -->
         <div class="md:max-w-1/2">
           <img src="./images/illustration-intro.svg" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- Features Section -->
+    <section id="feature" class="overflow-hidden">
+      <div
+        class="container flex flex-col mx-auto space-y-10 mt-10 px-4 md:flex-row md:space-y-0"
+      >
+        <!-- left side -->
+        <div class="flex flex-col space-y-6 md:w-1/2">
+          <h2 class="text-darkBlue text-3xl text-center font-bold md:text-left">
+            What's different about Manage?
+          </h2>
+          <p class="text-darkGrayishBlue text-center md:text-left">
+            Manage provides all the functionality your team needs, without the
+            complexity. Our software is tailor-made for modern digital product
+            teams
+          </p>
+        </div>
+        <!-- right side -->
+        <div class="flex flex-col md:w-1/2">
+          <div class="flex flex-col mb-12 md:flex-row md:space-x-8">
+            <!-- mobile header -->
+            <div
+              class="flex items-center mb-5 space-x-3 bg-brightRedSupLight w-screen rounded-l-full md:items-start md:w-fit md:bg-transparent"
+            >
+              <div class="rounded-full bg-brightRed text-white p-2 px-6">
+                01
+              </div>
+              <h3 class="font-bold text-darkBlue text-base md:hidden">
+                Track company-wide progress
+              </h3>
+            </div>
+            <div>
+              <h3
+                class="hidden font-bold pt-2 mb-5 text-darkBlue text-base md:block"
+              >
+                Track company-wide progress
+              </h3>
+              <p class="text-darkGrayishBlue w-fit">
+                See how your day-to-day tasks fit into the wider vision. Go from
+                tracking progress at the milestone level all the way done to the
+                smallest of details. Never lose sight of the bigger picture
+                again.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col mb-12 md:flex-row md:space-x-8">
+            <!-- mobile header -->
+            <div
+              class="flex items-center mb-5 space-x-3 bg-brightRedSupLight w-screen rounded-l-full md:items-start md:w-fit md:bg-transparent"
+            >
+              <div class="rounded-full bg-brightRed text-white p-2 px-6">
+                02
+              </div>
+              <h3 class="font-bold text-darkBlue text-base md:hidden">
+                Advanced built-in reports
+              </h3>
+            </div>
+            <div>
+              <h3
+                class="hidden font-bold pt-2 mb-5 text-darkBlue text-base md:block"
+              >
+                Advanced built-in reports
+              </h3>
+              <p class="text-darkGrayishBlue w-fit">
+                Set internal delivery estimates and track progress toward
+                company goals. Our customisable dashboard helps you build out
+                the reports you need to keep key stakeholders informed.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col mb-12 md:flex-row md:space-x-8">
+            <!-- mobile header -->
+            <div
+              class="flex items-center mb-5 space-x-3 bg-brightRedSupLight w-screen rounded-l-full md:items-start md:w-fit md:bg-transparent"
+            >
+              <div class="rounded-full bg-brightRed text-white p-2 px-6">
+                03
+              </div>
+              <h3 class="font-bold text-darkBlue text-base md:hidden">
+                Everything you need in one place
+              </h3>
+            </div>
+            <div>
+              <h3
+                class="hidden font-bold pt-2 mb-5 text-darkBlue text-base md:block"
+              >
+                Everything you need in one place
+              </h3>
+              <p class="text-darkGrayishBlue w-fit">
+                Stop jumping from one service to another to communicate, store
+                files, track tasks and share documents. Manage offers an
+                all-in-one team productivity solution.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
