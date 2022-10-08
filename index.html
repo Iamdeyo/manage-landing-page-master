@@ -8,6 +8,68 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <div class="text-2xl">Hello Deyo</div>
+    <!-- Nav -->
+    <nav class="container p-6 mx-auto">
+      <div class="flex items-center justify-between">
+        <div class="logo pt-2">
+          <img src="./images/logo.svg" alt="logo" />
+        </div>
+        <!-- Menu item -->
+        <div class="hidden item-center space-x-6 md:flex">
+          <a href="#" class="text-darkBlue hover:text-darkGrayishBlue">
+            Pricing
+          </a>
+          <a href="#" class="text-darkBlue hover:text-darkGrayishBlue">
+            Product
+          </a>
+          <a href="#" class="text-darkBlue hover:text-darkGrayishBlue">
+            About Us
+          </a>
+          <a href="#" class="text-darkBlue hover:text-darkGrayishBlue">
+            Careers
+          </a>
+          <a href="#" class="text-darkBlue hover:text-darkGrayishBlue">
+            Community
+          </a>
+        </div>
+        <a
+          href="#"
+          class="hidden p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block"
+        >
+          Get Started
+        </a>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <section id="hero">
+      <div
+        class="container mx-auto mt-10 p-6 flex flex-col-reverse items-center md:flex-row"
+      >
+        <!-- Text Side -->
+        <div class="flex flex-col space-y-12 md:w-1/2">
+          <h1
+            class="max-w-md text-4xl text-darkBlue text-center md:text-left md:text-5xl"
+          >
+            Bring everyone together to build better products.
+          </h1>
+          <p class="max-w-sm text-center md:text-left">
+            Manage makes it simple for software teams to plan day-to-day tasks
+            while keeping the larger team goals in view
+          </p>
+          <div class="flex justify-center md:justify-start">
+            <a
+              href="#"
+              class="p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+        <!-- Image Side -->
+        <div class="md:max-w-1/2">
+          <img src="./images/illustration-intro.svg" alt="" />
+        </div>
+      </div>
+    </section>
   </body>
 </html>
