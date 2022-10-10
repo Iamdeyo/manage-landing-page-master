@@ -6,6 +6,9 @@ body {
   font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 16px;
 }
+body.active {
+  overflow: hidden;
+}
 .slider {
 }
 #slider::-webkit-scrollbar {
@@ -17,10 +20,49 @@ body {
   background-repeat: no-repeat;
   background-position: 38% 150%;
 }
-/* .log {
-  width: 500px;
-  height: 500px;
-} */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: brown;
+  padding-bottom: 10px;
+}
+.attribution a {
+  color: hsl(227, 12%, 61%);
+}
+.attribution a:hover {
+  text-decoration: underline;
+}
+h1,
+h2 {
+  line-height: 60px !important;
+}
+p {
+  line-height: 30px !important;
+}
+#menu-btn {
+  z-index: 11;
+  position: relative;
+}
+#menu-btn > :first-child {
+  display: block;
+}
+#menu-btn > :last-child {
+  display: none;
+}
+#menu-btn.active > :first-child {
+  display: none;
+}
+#menu-btn.active > :last-child {
+  display: block;
+}
+#mobile-menu {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.1));
+  left: -120%;
+  transition: all ease 0.32s;
+}
+#mobile-menu.active {
+  left: 0%;
+}
 @media screen and (min-width: 768px) {
   #banner {
     background-size: 110%;

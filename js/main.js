@@ -42,6 +42,27 @@ const scrollCarousel = () => {
 };
 scrollCarousel();
 
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const menu = document.querySelector('#mobile-menu > div');
+const body = document.querySelector('body');
+
+window.addEventListener('click', () => {
+  menuBtn.classList.remove('active');
+  body.classList.remove('active');
+  mobileMenu.classList.remove('active');
+});
+menuBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  menuBtn.classList.toggle('active');
+  mobileMenu.classList.toggle('active');
+  body.classList.toggle('active');
+});
+menu.addEventListener('click', (e) => {
+  e.stopPropagation();
+});
+
+// Email form control
 const emailForm = document.getElementById('email-form');
 
 emailForm.addEventListener('submit', (e) => {
