@@ -16,8 +16,11 @@ body {
   background-size: 500%;
   background-repeat: no-repeat;
   background-position: 38% 150%;
-  margin-bottom: 1000px;
 }
+/* .log {
+  width: 500px;
+  height: 500px;
+} */
 @media screen and (min-width: 768px) {
   #banner {
     background-size: 110%;
