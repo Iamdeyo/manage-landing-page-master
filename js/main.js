@@ -1,46 +1,40 @@
+// Carousel Control
+
 const slider = document.getElementById('slider');
 const carouselBtn = document.querySelectorAll('.carousel-btn');
 const sliderItem = document.querySelector('#slider > div');
 let carouselScroll = sliderItem.clientWidth;
-// console.log(slider.scrollWidth);
-// console.log(slider.offsetWidth);
-// slider.addEventListener('click', () => {
-//   //   console.log(slider1.getBoundingClientRect().left);
-//   console.log(slider.scrollLeft);
-//   //   console.log(slider.childElementCount);
-// });
 
-// test.addEventListener('click', () => {
-//   slider.scrollTo(500, 00);
-//   console.log(slider.scrollLeft);
-
-//   console.log('clicked');
-// });
-
-const scrollCarousel = () => {
-  carouselBtn.forEach((cr, i) => {
-    // console.log(i);
-    // const removeClass = () => {
-    //   cr.classList.remove('bg-brightRed');
-    //   cr.classList.add('bg-brightRed');
-
-    //   console.log(1);
-    // };
-
-    slider.addEventListener('click', () => {
-      //   console.log(slider.scrollLeft);
-      //   console.log(carouselScroll * i + 16 + '-----');
-      if (slider.scrollLeft === carouselScroll * i) {
-        // console.log(cr);
-      }
-    });
-
-    cr.addEventListener('click', () => {
-      slider.scrollTo(carouselScroll * i, 00);
-    });
-  });
+const scrollCarousel = (btn) => {
+  btn.classList.toggle('bg-brightRed');
 };
-scrollCarousel();
+
+slider.addEventListener('scroll', () => {
+  let sliderItemWidth = sliderItem.clientWidth + 32;
+
+  const itemWidth = (x) => {
+    return sliderItemWidth * x;
+  };
+  carouselBtn.forEach((cr) => {
+    cr.classList.remove('bg-brightRed');
+  });
+
+  slider.scrollLeft < itemWidth(1) && scrollCarousel(carouselBtn[0]);
+  (slider.scrollLeft >= itemWidth(1)) & (slider.scrollLeft < itemWidth(2)) &&
+    scrollCarousel(carouselBtn[1]);
+  (slider.scrollLeft >= itemWidth(2)) & (slider.scrollLeft < itemWidth(3)) &&
+    scrollCarousel(carouselBtn[2]);
+  slider.scrollLeft >= itemWidth(3) && scrollCarousel(carouselBtn[3]);
+});
+
+carouselBtn.forEach((cr, i) => {
+  cr.addEventListener('click', () => {
+    slider.scrollTo(carouselScroll * i, 00);
+  });
+});
+
+//
+// Mobile Menu control
 
 const menuBtn = document.getElementById('menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
@@ -52,6 +46,7 @@ window.addEventListener('click', () => {
   body.classList.remove('active');
   mobileMenu.classList.remove('active');
 });
+
 menuBtn.addEventListener('click', (e) => {
   e.stopPropagation();
   menuBtn.classList.toggle('active');
@@ -62,6 +57,7 @@ menu.addEventListener('click', (e) => {
   e.stopPropagation();
 });
 
+//
 // Email form control
 const emailForm = document.getElementById('email-form');
 

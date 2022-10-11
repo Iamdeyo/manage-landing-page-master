@@ -677,16 +677,16 @@ video {
   margin-bottom: 1.25rem;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
 
 .mt-2 {
   margin-top: 0.5rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
 }
 
 .block {
@@ -987,9 +987,8 @@ video {
   line-height: 1.5rem;
 }
 
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
+.text-\[2\.5rem\] {
+  font-size: 2.5rem;
 }
 
 .text-sm {
@@ -1034,11 +1033,15 @@ body {
   font-size: 16px;
 }
 
-body.active {
-  overflow: hidden;
+header {
+  background-image: url('../images/bg-tablet-pattern.svg');
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-position: 50px -100px;
 }
 
-.slider {
+body.active {
+  overflow: hidden;
 }
 
 #slider::-webkit-scrollbar {
@@ -1046,10 +1049,10 @@ body.active {
 }
 
 #banner {
-  background-image: url('../images/bg-simplify-section-desktop.svg');
-  background-size: 500%;
+  background-image: url('../images/bg-simplify-section-mobile.svg');
   background-repeat: no-repeat;
-  background-position: 38% 150%;
+  background-size: 80px;
+  background-position: 0% 35%;
 }
 
 .attribution {
@@ -1099,7 +1102,7 @@ p {
 
 #mobile-menu {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.1));
-  left: -120%;
+  left: -150%;
   transition: all ease 0.32s;
 }
 
@@ -1107,11 +1110,30 @@ p {
   left: 0%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 567px) {
+  header {
+    background-size: 750px;
+    background-position: 300px -100px;
+  }
+}
+
+@media screen and (min-width: 967px) {
+  body {
+    background-image: url('../images/bg-tablet-pattern.svg');
+    background-size: 750px;
+    background-repeat: no-repeat;
+    background-position: -400px 1200px;
+  }
+
+  header {
+    background-size: 750px;
+    background-position: 800px -100px;
+  }
+
   #banner {
-    background-size: 110%;
-    /* background-position-x: 250%; */
-    background-position: -150% 100%;
+    background-size: 1800px;
+    background-position: 0 100%;
+    background-image: url('../images/bg-simplify-section-desktop.svg');
   }
 }
 
