@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github link](https://github.com/Iamdeyo/manage-landing-page-master)
+- Live Site URL: [live site URL](https://genuine-sfogliatella-da1e46.netlify.app/)
 
 ## My process
 
