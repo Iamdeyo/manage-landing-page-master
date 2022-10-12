@@ -58,10 +58,13 @@ menu.addEventListener('click', (e) => {
 });
 
 //
-// Email form control
+// Email form vaildation
 const emailForm = document.getElementById('email-form');
 
 emailForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  alert('Email sent successfully');
+
+  if (e.target[0].validity.valid & (e.target[0].value !== '')) {
+    alert('email sent successfully');
+  }
 });
