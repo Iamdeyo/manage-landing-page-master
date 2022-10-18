@@ -242,7 +242,9 @@
         </h2>
         <div
           id="slider"
+          role="slider"
           class="overflow-hidden overflow-x-scroll scroll-smooth snap-mandatory snap-x space-x-8 flex w-full p-20 px-0 md:px-0"
+          tabindex="0"
         >
           <div
             class="snap-start w-full items-center bg-veryLightGray p-4 flex flex-col relative min-w-full md:min-w-[500px]"
@@ -333,7 +335,7 @@
       </div>
     </section>
     <!-- Banner section -->
-    <section id="banner" class="bg-brightRed">
+    <section id="banner" role="banner" class="bg-brightRed">
       <div
         class="container mx-auto w-full flex flex-col p-24 px-4 justify-center space-y-10 items-center md:flex-row md:justify-between md:space-y-0"
       >
@@ -395,11 +397,11 @@
               class="peer w-full p-3 px-6 pt-2 text-brightRed bg-white outline-0 rounded-full border-2 focus:border-brightRed"
               placeholder="Updates in your inbox..."
             />
-            <p
+            <span
               class="mt-2 invisible peer-invalid:visible text-brightRed text-sm"
             >
               Please insert a valid email.
-            </p>
+            </span>
           </label>
 
           <button
@@ -452,6 +454,8 @@
             href="https://twitter.com"
             class="w-full max-w-[40px] lg:max-w-[30px]"
             target="_blank"
+            aria-label="Twitter"
+            aria-hidden="true"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
